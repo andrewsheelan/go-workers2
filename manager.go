@@ -4,7 +4,7 @@ import (
 	"os"
 	"sync"
 
-	"github.com/digitalocean/go-workers2/storage"
+	"github.com/andrewsheelan/go-workers2/storage"
 	"github.com/go-redis/redis"
 	"github.com/google/uuid"
 )

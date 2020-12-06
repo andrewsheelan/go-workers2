@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/digitalocean/go-workers2.png)](https://travis-ci.org/digitalocean/go-workers2)
-[![GoDoc](https://godoc.org/github.com/digitalocean/go-workers2?status.png)](https://godoc.org/github.com/digitalocean/go-workers2)
+[![Build Status](https://travis-ci.org/andrewsheelan/go-workers2.png)](https://travis-ci.org/andrewsheelan/go-workers2)
+[![GoDoc](https://godoc.org/github.com/andrewsheelan/go-workers2?status.png)](https://godoc.org/github.com/andrewsheelan/go-workers2)
 
 [Sidekiq](http://sidekiq.org/) compatible
 background workers in [golang](http://golang.org/).
@@ -21,7 +21,7 @@ package main
 import (
   "fmt"
 
-  workers "github.com/digitalocean/go-workers2"
+  workers "github.com/andrewsheelan/go-workers2"
 )
 
 func myJob(message *workers.Msg) error {
@@ -125,4 +125,4 @@ When running the above code example, it will produce the following output at `lo
 ]
 ```
 
-Development sponsored by DigitalOcean. Code forked from [github/jrallison/go-workers](https://github.com/jrallison/go-workers). Initial development sponsored by [Customer.io](http://customer.io).
+Development sponsored by andrewsheelan. Code forked from [github/jrallison/go-workers](https://github.com/jrallison/go-workers). Initial development sponsored by [Customer.io](http://customer.io).

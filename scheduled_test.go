@@ -3,7 +3,7 @@ package workers
 import (
 	"testing"
 
-	"github.com/digitalocean/go-workers2/storage"
+	"github.com/andrewsheelan/go-workers2/storage"
 	"github.com/go-redis/redis"
 	"github.com/stretchr/testify/assert"
 )

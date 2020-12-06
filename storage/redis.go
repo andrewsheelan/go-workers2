@@ -1,6 +1,7 @@
 package storage
 
 import (
+	"context"
 	"fmt"
 	"log"
 	"os"
@@ -8,7 +9,7 @@ import (
 	"time"
 
 	"github.com/bitly/go-simplejson"
-	"github.com/go-redis/redis"
+	"github.com/go-redis/redis/v8"
 )
 
 type redisStore struct {
@@ -30,7 +31,8 @@ func NewRedisStore(namespace string, client *redis.Client) Store {
 }
 
 func (r *redisStore) DequeueMessage(queue string, inprogressQueue string, timeout time.Duration) (string, error) {
-	message, err := r.client.BRPopLPush(r.getQueueName(queue), r.getQueueName(inprogressQueue), timeout).Result()
+	ctx := context.TODO()
+	message, err := r.client.BRPopLPush(ctx, r.getQueueName(queue), r.getQueueName(inprogressQueue), timeout).Result()
 
 	if err != nil {
 		// If redis returns null, the queue is empty.
